@@ -1,0 +1,16 @@
+import java.util.*;
+class do_While
+{
+
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+       int n;
+        do
+        {
+            System.out.println("Enter 1-10");
+              n=sc.nextInt();
+        }while(n<1 || n>10);
+        System.out.println("ok");
+    }
+}
