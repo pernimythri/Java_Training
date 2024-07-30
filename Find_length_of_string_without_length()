@@ -1,5 +1,5 @@
 import java.util.*;
-class Sum_Of_Digits {
+class find_Length_Of_String {
     public static void main(String[] args) {
       Scanner sc=new Scanner(System.in); 
       String s=sc.next();
@@ -9,5 +9,5 @@ class Sum_Of_Digits {
          count+=1;
      }
      
-      System.out.println("No.of_Digits in a number : " + count);
+      System.out.println("Length : " + count);
     }}
