@@ -1,0 +1,67 @@
+class strFunc{
+public static void main(String args[])
+{
+String s1="HELLO",s2="Hello";
+//no.of characters in a string
+System.out.println("Length of string : " + s1.length());
+
+// to check both strings are same or not (Case Sensitive)
+if(s1.equals(s2))
+System.out.println(s1 + " & " +s2 + " are same");
+else
+System.out.println(s1 + " & " +s2 + " are not same");
+ 
+ // to check both strings are same or not (Case insensitive)
+ if(s1.equalsIgnoreCase(s2))
+ System.out.println(s1 + " & " +s2 + " are same");
+else
+System.out.println(s1 + " & " +s2 + " are not same");
+
+// find the character at the given index.
+
+System.out.println("Character at index 2 : " + s1.charAt(2));
+
+// compare first string with second string , it returns the distance of mismatched characters
+
+System.out.println("Distance : " + s1.compareTo(s2));
+
+s1="AABBCABBAA";
+s2="Java String Functions";
+
+//check whether string starts or ends with given substring or not
+
+System.out.println("The String " + "is starts with (AAB) : " + s1.startsWith("AAB"));
+
+System.out.println("The String " + "is starts with (AAB) : " + s1.endsWith("AAB"));
+
+// find the location of first and last occurrence of a substring
+
+System.out.println("First index of(BB) in " + s1+" : " + s1.indexOf("BB"));
+
+System.out.println("First index of(BB) in " + s1+" : " + s1.lastIndexOf("BB"));
+
+// replacing a substring with new string
+
+System.out.println("Replacing (ABB) to (xy) of "+s1+" : "+ s1.replace("ABB","xy"));
+
+// get substring from given string
+System.out.println("Substring of "+ s2 + " from 5 to 10 : " + s2.substring(5,10));
+
+//split string by using (-) as delimiter( delimiter is a character or symbol that separates different pieces of data, such as words, phrases, lines, or code snippets)
+s1="This-is-string-functions";
+String[] splitArr=s1.split("-");
+System.out.println("The splitted parts are : ");
+for(String i:splitArr)
+System.out.println(i);
+
+// trim the blank spaces from starting and ending of the string
+s2="            spaces               ";
+System.out.println("Before Trimming : "+ s2);
+
+System.out.println("After Trimming : "+ s2.trim());
+
+
+
+
+}
+}
