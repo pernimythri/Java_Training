@@ -1,0 +1,13 @@
+import java.util.*;
+class Pos_Neg
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a value ");
+        int a=sc.nextInt();
+        if(a>0)
+        System.out.println("+ve");
+        else
+        System.out.println("-ve");
+    }}
