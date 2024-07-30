@@ -1,0 +1,22 @@
+import java.util.*;
+class Armstrong {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in); 
+      int num=sc.nextInt();
+      String l=Integer.toString(num);
+      int len=l.length();
+      int temp=num;
+      int val,res=0;
+      while(num>0)
+      {
+          val=num%10;
+          res+=Math.pow(val,len);
+          num=num/10;
+      }
+      if(res==temp)
+      
+           System.out.println("Armstrong");
+           else
+           
+            System.out.println("not armstrong");
+    }}
