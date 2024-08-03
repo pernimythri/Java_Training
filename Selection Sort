@@ -1,0 +1,42 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Solution {
+
+    int[] selectionSort(int[] A, int n) {
+        for (int i = 0; i < n - 1; i++) {
+
+            // Assume the minimum is the first element
+            int minIndex = i;
+
+            // Test against elements after i to find the smallest
+            for (int j = i + 1; j < n; j++) {
+                // If this element is less, then it is the new minimum
+                if (A[j] < A[minIndex]) {
+
+                    // Found new minimum; remember its index
+                    minIndex = j;
+                }
+            }
+            // Swap the found minimum element with the first element
+            int temp = A[minIndex];
+            A[minIndex] = A[i];
+            A[i] = temp;
+        }
+        return A;
+    }
+
+    public static void main(String[] args) {
+        Solution obj = new Solution();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of array : ");
+        int n = sc.nextInt();
+        System.out.println("Enter elements into array : ");
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int[] result = obj.selectionSort(arr, n);
+        System.out.println("Sorted array : " + Arrays.toString(result));
+    }
+}
