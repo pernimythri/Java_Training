@@ -9,7 +9,7 @@ public class Solution {
             // Assume the minimum is the first element
             int minIndex = i;
 
-            // Test against elements after i to find the smallest
+            
             for (int j = i + 1; j < n; j++) {
                 // If this element is less, then it is the new minimum
                 if (A[j] < A[minIndex]) {
