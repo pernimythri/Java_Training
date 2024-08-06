@@ -22,11 +22,11 @@ class Solution {
         Solution obj=new Solution();
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter String1 : ");
-        String s1=sc.next();
+        String s1=sc.nextLine();
         System.out.print("Enter String2 : ");
         
         
-        String s2=sc.next();
+        String s2=sc.nextLine();
         System.out.println(obj.anagram(s1,s2));
         
     }}
