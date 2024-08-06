@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class Solution {
+    void countWords(String s) {
+       
+        String[] arr = s.split(" ");
+        int count = arr.length;
+        System.out.println("Number of words: " + count);
+    }
+
+    public static void main(String[] args) {
+        Solution obj = new Solution();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter text: ");
+        String s = sc.nextLine();
+        obj.countWords(s);
+    }
+}
