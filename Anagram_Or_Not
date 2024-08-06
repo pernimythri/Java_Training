@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Solution {
-    String frequencyMap(String s1,String s2)
+    String anagram(String s1,String s2)
     {
         HashMap<Character, Integer> map1 = new HashMap<>();
        HashMap<Character, Integer> map2 = new HashMap<>();
@@ -27,6 +27,6 @@ class Solution {
         
         
         String s2=sc.next();
-        System.out.println(obj.frequencyMap(s1,s2));
+        System.out.println(obj.anagram(s1,s2));
         
     }}
