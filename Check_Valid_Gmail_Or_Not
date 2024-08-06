@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Solution {
+    boolean validGmail(String s) {
+       
+        return s.contains("@")&& s.indexOf('@') == s.lastIndexOf('@') && s.endsWith("@gmail.com")  ;
+    }
+
+    public static void main(String[] args) {
+        Solution obj = new Solution();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter email: ");
+        String s = sc.nextLine();
+        if (obj.validGmail(s)) {
+            System.out.println("Valid Gmail");
+        } else {
+            System.out.println("Not a valid Gmail");
+        }
+
+    }
+}
