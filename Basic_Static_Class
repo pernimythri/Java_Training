@@ -1,0 +1,20 @@
+class Person
+{
+    static String sname;
+    static  String rno;
+    static void Method(String sn,String rn)
+    {
+         sname=sn;
+         rno=rn;
+    }
+    static void Display()
+    {
+    System.out.println("Name= "+sname);
+     System.out.println("Rno=  "+rno);
+    }
+    public static void main(String args[])
+    {
+        Person.Method("mythri","234");
+        Person.Display();
+    }
+}
