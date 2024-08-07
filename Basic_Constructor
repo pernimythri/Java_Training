@@ -1,0 +1,21 @@
+class Person
+{
+    String sname;
+    int rno;
+    Person(String sname,int rno)
+    {
+        this.sname=sname;
+        this.rno=rno;
+    }
+    void Display()
+    {
+        
+        System.out.println("sname = " +sname);
+        System.out.println("Rno = "+rno);
+    }
+    public static void main(String args[])
+    {
+        Person obj=new Person("Mythri",97);
+        obj.Display();
+    }
+}
