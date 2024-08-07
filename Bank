@@ -1,0 +1,40 @@
+class bank
+{
+    private String Accno;
+    private double Bal;
+    public void setAccno(String Accno)
+    {
+        this.Accno=Accno;
+        
+    }
+    public String getAccno()
+    {
+        return Accno;
+    }
+    public double getBal()
+    {
+        return Bal;
+    }
+    public void Deposit(double Amount)
+    {
+        if(Amount>0)
+        {
+            Bal+=Amount;
+        }
+        
+    }
+    public void Withdraw(double Amount)
+    {
+        if(Amount>0 && Amount<=Bal)
+        Bal-=Amount;
+    }
+    public static void main(String args[])
+    {
+        bank obj=new bank();
+        obj.setAccno("23dfg");
+        obj.Deposit(123);
+        obj.Withdraw(2);
+        System.out.println(obj.getAccno());
+        System.out.println(obj.getBal());
+        }
+}
