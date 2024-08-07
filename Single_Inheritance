@@ -1,0 +1,22 @@
+class Man1 {
+    // Method defined in Man1 class
+    void brushing() {
+        System.out.println("Brushing");
+    }
+}
+
+class Man2 extends Man1 {
+    // Method defined in Man2 class
+    void bathing() {
+        System.out.println("Bathing");
+    }}
+class Main
+{    public static void main(String[] args) {
+        // Creating an instance of Man2
+        Man2 obj = new Man2();
+        // Calling method from Man1 class
+        obj.brushing();
+        // Calling method from Man2 class
+        obj.bathing();
+    }
+}
