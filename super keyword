@@ -1,0 +1,42 @@
+class Person1
+{
+    String name;
+    int age;
+    Person1(String name,int age)
+    {
+        this.name=name;
+        this.age=age;
+    }
+    void display()
+    {
+        System.out.println("name = " + name);
+         System.out.println("age = " + age);
+    }
+}
+
+class PersonDetails extends Person1
+{
+    String company;
+    double salary;
+    PersonDetails(String name,int age,String company ,double salary)
+    {
+        super(name,age);
+     this.company=company;
+     this.salary=salary;
+    }
+    void display()
+    {
+        super.display();
+        System.out.println("company = " +company);
+        System.out.println("salary = "+salary);
+    }
+    
+}
+class Main
+{
+    public static void main(String args[])
+    {
+        PersonDetails obj=new PersonDetails("mythri",24,"google",120000);
+        obj.display();
+    }
+}
