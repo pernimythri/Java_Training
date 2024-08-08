@@ -1,0 +1,51 @@
+abstract class File
+{
+    abstract void open();
+    {
+        
+    }
+    abstract void read();
+    {
+        
+    }
+    abstract void write();
+{    
+}
+
+    
+    abstract void close();
+    {
+        
+}}
+class Book extends File
+{
+    void open()
+    {
+        System.out.println("open");
+    }
+     void read()
+    {
+        System.out.println("read");
+    }
+     void write()
+    {
+        System.out.println("write");
+    }
+      void close()
+    {
+        System.out.println("close");
+    }
+  
+}
+class Main
+{
+    public static void main(String args[])
+    {
+        Book obj=new Book();
+        obj.open();
+        obj.read();
+        obj.write();
+        obj.close();
+        
+    }
+}
