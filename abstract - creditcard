@@ -1,0 +1,49 @@
+abstract class Payment
+{
+    abstract void processPayment(double amount);
+    abstract String getPaymentDetails();
+    
+}
+class CreditCardPayment extends Payment{
+    private String cardNumber;
+    CreditCardPayment(String cardNumber)
+    {
+        this.cardNumber=cardNumber;
+    }
+    void processPayment(double amount)
+    {
+        System.out.println("Processing credit card payment of $" + amount);
+    }
+    String getPaymentDetails()
+    {
+        return "Credit Card :" +cardNumber;
+        
+    }
+}
+
+class DebitPayment
+{
+    private String email;
+    DebitPayment(String email){
+        this.email=email;
+    }
+    void processPayment(double amount)
+    {
+        System.out.println("Processing pay of $ " + amount);
+    }
+    String getPaymentDetails()
+    {
+        return "Debit Email : " + email;
+    }
+}
+class Main{
+    public static void main(String args[])
+    {
+        DebitPayment obj=new DebitPayment("pernimythri2005@gmail.com");
+        obj.processPayment(800);
+        System.out.println(obj.getPaymentDetails());
+        CreditCardPayment c= new CreditCardPayment("1234567890");
+        c.processPayment(100);
+        System.out.println(c.getPaymentDetails());
+    }
+}
