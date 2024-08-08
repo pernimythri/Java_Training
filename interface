@@ -1,0 +1,46 @@
+interface Drive {
+    void road();
+    void show();
+}
+
+class MyDrive implements Drive {
+    
+    public void road() {
+        System.out.println("road");
+    }
+
+   
+    public void show() {
+        System.out.println("show");
+    }
+
+    void door() {
+        System.out.println("door");
+    }
+
+    void windows() {
+        System.out.println("windows");
+    }
+
+    void breaks() {
+        System.out.println("breaks");
+    }
+}
+
+class Vehicle extends MyDrive {
+    void display() {
+        System.out.println("display");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle obj = new Vehicle();
+        obj.door();
+        obj.windows();
+        obj.breaks();
+        obj.road();
+        obj.show();
+        obj.display();
+    }
+}
