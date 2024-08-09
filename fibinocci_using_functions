@@ -1,20 +1,28 @@
 import java.util.*;
-
 class Solution {
-    int fib(int n)
-    {
-        if(n==0)
-        return 0;
-        else if(n==1)
-        return 1;
-        else
-        return n*fib(n-1);
+    int fib(int n) {
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        } else {
+            int pre1 = 0;
+            int pre2 = 1;
+            int sum = 0;
+            for (int i = 2; i <= n; i++) {
+                sum = pre1 + pre2;
+                pre1 = pre2;
+                pre2 = sum;
+            }
+
+            return sum;
+        }
     }
 
     public static void main(String[] args) {
         Solution obj = new Solution();
         Scanner sc = new Scanner(System.in);
-    
-        int n=sc.nextInt();
-        System.out.println(obj.fib(n));
-    }}
+        int n = sc.nextInt();
+        System.out.println("fibinocci number  :" + obj.fib(n));
+    }
+}
